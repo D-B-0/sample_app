@@ -37,7 +37,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
+  gem 'eventmachine', '1.0.9.1'
   gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
+  gem 'guard'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
 
 group :development do
@@ -54,7 +57,6 @@ group :test do
   gem 'rails-controller-testing'
   gem 'minitest'
   gem 'minitest-reporters'
-  gem 'guard'
   gem 'guard-minitest'
 end
 
